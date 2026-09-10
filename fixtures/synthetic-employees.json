@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jordan",
+    "participant": "Jordan (synthetic)",
+    "voice": "Samantha",
+    "answers": [
+      "It said get your expenses in within thirty days, don't sit on them till the end of the quarter. And take a picture of the receipt in the Navan app right when you pay.",
+      "Three hundred bucks, that's over the limit, so I'd ping my manager in the app for approval first, then buy it, then snap the receipt in Navan."
+    ]
+  },
+  {
+    "id": "priya",
+    "participant": "Priya (synthetic)",
+    "voice": "Karen",
+    "answers": [
+      "Basically file expenses faster and use the app for receipts instead of email.",
+      "I'd buy the part, take a photo of the receipt in the app, and submit it that week."
+    ]
+  },
+  {
+    "id": "marcus",
+    "participant": "Marcus (synthetic)",
+    "voice": "Daniel",
+    "answers": [
+      "Um, honestly the chorus is stuck in my head. Thirty days, thirty days. And no more emailing receipts to Denise, it all goes in the app now.",
+      "Anything over five hundred I'd get approved first. Three hundred is under that so I'd just buy it and log the receipt in the app."
+    ]
+  },
+  {
+    "id": "elena",
+    "participant": "Elena (synthetic)",
+    "voice": "Moira",
+    "answers": [
+      "File within thirty days, receipts in Navan, and get pre-approval for the big stuff over two fifty.",
+      "Three hundred is over two fifty, so approval from my manager before I buy, then the receipt goes in the app at the counter."
+    ]
+  },
+  {
+    "id": "devon",
+    "participant": "Devon (synthetic)",
+    "voice": "Fred",
+    "answers": [
+      "I think it was about the new expense system? Something about ninety days.",
+      "I'd buy it and email the receipt to accounting like always."
+    ]
+  },
+  {
+    "id": "aisha",
+    "participant": "Aisha (synthetic)",
+    "voice": "Tessa",
+    "answers": [
+      "Thirty days to file, photo of the receipt in the app when you pay, and manager sign-off before anything over two hundred fifty dollars.",
+      "Approval first in the app since it's over two fifty, then buy, then snap the receipt right there."
+    ]
+  },
+  {
+    "id": "tom",
+    "participant": "Tom (synthetic)",
+    "voice": "Alex",
+    "answers": [
+      "Get the receipts in quicker. The song was catchy, I'll give them that.",
+      "Buy the part, keep the receipt, turn it in at the end of the month with the rest."
+    ]
+  },
+  {
+    "id": "lena",
+    "participant": "Lena (synthetic)",
+    "voice": "Fiona",
+    "answers": [
+      "Thirty days, the Navan app for receipts, no emailing. And approval for anything over two fifty before you spend it.",
+      "Over two fifty, so I message my manager for approval in Navan first. Then I buy it and photograph the receipt in the app."
+    ]
+  },
+  {
+    "id": "carlos",
+    "participant": "Carlos (synthetic)",
+    "voice": "Diego",
+    "answers": [
+      "Thirty days to submit. Receipts in the app. I don't remember anything about approvals.",
+      "I'd just buy it, it's only three hundred, and put the receipt in the app."
+    ]
+  },
+  {
+    "id": "nina",
+    "participant": "Nina (synthetic)",
+    "voice": "Victoria",
+    "answers": [
+      "Sixty days to file I think, and use the app for receipts.",
+      "Get approval after I buy it if it's big, and snap the receipt in the app."
+    ]
+  },
+  {
+    "id": "sam",
+    "participant": "Sam (synthetic)",
+    "voice": "Ralph",
+    "answers": [
+      "Thirty days. App for receipts at the point of sale. Pre-approval over two fifty. The whole thing.",
+      "Three hundred is over the two fifty line, so pre-approval in the app from my manager, then purchase, then receipt photo in Navan."
+    ]
+  },
+  {
+    "id": "grace",
+    "participant": "Grace (synthetic)",
+    "voice": "Kathy",
+    "answers": [
+      "Something about not waiting till the end of the quarter, get them in within the month. And the app thing for receipts.",
+      "For three hundred I'd ask my supervisor first, then buy, then take the picture in the app."
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "banger-recall",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Banger Recall: a 45-second voice check-in that proves a business song's message landed.",
+  "scripts": {
+    "recall": "bun run src/recall-check.ts",
+    "report": "bun run src/aggregate.ts",
+    "bake": "bun run src/bake-fixtures.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.0"
+  }
+}

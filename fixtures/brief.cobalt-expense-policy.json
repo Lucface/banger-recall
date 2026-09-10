@@ -1,0 +1,31 @@
+{
+  "song_title": "Thirty Days (The Expense Song)",
+  "client": "Cobalt Logistics (fictional)",
+  "audience": "40 field technicians who buy parts on the road and file expenses late",
+  "objective": "Move the field team onto the new expense policy: 30-day filing, receipts in the app, pre-approval over $250. Replace the old 90-day, email-your-receipts habit.",
+  "released_on": "2026-09-02",
+  "required_messages": [
+    {
+      "id": "M1",
+      "message": "Submit expense reports within 30 days of the purchase",
+      "behavior": "File each expense inside 30 days instead of batching them at quarter end",
+      "common_misrecall": "The old 90-day window, or a made-up number like 60 days"
+    },
+    {
+      "id": "M2",
+      "message": "Snap the receipt in the Navan app at the point of sale, never email it",
+      "behavior": "Photograph the receipt in the app when paying, instead of emailing receipts to accounting",
+      "common_misrecall": "Emailing receipts to Denise in accounting, the old process"
+    },
+    {
+      "id": "M3",
+      "message": "Anything over $250 needs manager pre-approval before you buy",
+      "behavior": "Get a manager's approval in the app before any purchase over $250",
+      "common_misrecall": "The old $500 threshold, or approval after the purchase instead of before"
+    }
+  ],
+  "check_in_questions": [
+    "In your own words, what did the song ask you to do differently?",
+    "Say you bought a three hundred dollar part tomorrow. Walk me through exactly what you'd do."
+  ]
+}
