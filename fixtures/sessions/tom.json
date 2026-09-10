@@ -1,0 +1,87 @@
+{
+  "session_id": "fixture-tom",
+  "mode": "fixture",
+  "participant": "Tom (synthetic)",
+  "client": "Cobalt Logistics (fictional)",
+  "song_title": "Thirty Days (The Expense Song)",
+  "brief_messages": [
+    {
+      "id": "M1",
+      "message": "Submit expense reports within 30 days of the purchase",
+      "behavior": "File each expense inside 30 days instead of batching them at quarter end",
+      "common_misrecall": "The old 90-day window, or a made-up number like 60 days"
+    },
+    {
+      "id": "M2",
+      "message": "Snap the receipt in the Navan app at the point of sale, never email it",
+      "behavior": "Photograph the receipt in the app when paying, instead of emailing receipts to accounting",
+      "common_misrecall": "Emailing receipts to Denise in accounting, the old process"
+    },
+    {
+      "id": "M3",
+      "message": "Anything over $250 needs manager pre-approval before you buy",
+      "behavior": "Get a manager's approval in the app before any purchase over $250",
+      "common_misrecall": "The old $500 threshold, or approval after the purchase instead of before"
+    }
+  ],
+  "started_at": "2026-09-10T02:20:26.827Z",
+  "completed_at": "2026-09-10T02:20:40.487Z",
+  "consent": {
+    "participant": "Tom (synthetic)",
+    "consented": true,
+    "asked_at": "2026-09-10T02:20:26.827Z",
+    "script_version": "2026-09-09.1",
+    "retention_days": 30,
+    "purpose": "to check whether the song's message landed; the recording is scored, summarized for the company, and never used to clone a voice",
+    "withdrawal": "say 'stop' at any point, or tell the company to delete the recording; the check-in ends and nothing is kept",
+    "answer_transcript": "yes (synthetic employee; consent simulated)"
+  },
+  "answers": [
+    {
+      "question": "In your own words, what did the song ask you to do differently?",
+      "transcript": "Get the receipts in quicker.\nThe song was catchy, I'll give them that.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/tom-q1.wav",
+      "is_follow_up": false
+    },
+    {
+      "question": "Say you bought a three hundred dollar part tomorrow. Walk me through exactly what you'd do.",
+      "transcript": "Buy the pod, keep the receipt, turn it in at the end of the month with the rest.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/tom-q2.wav",
+      "is_follow_up": false
+    }
+  ],
+  "recall": {
+    "per_message": [
+      {
+        "message_id": "M1",
+        "status": "partial",
+        "evidence_quote": "Get the receipts in quicker.",
+        "note": "Right direction on speed but no 30-day detail, and he'd still batch at month end."
+      },
+      {
+        "message_id": "M2",
+        "status": "missed",
+        "evidence_quote": "keep the receipt, turn it in at the end of the month",
+        "note": "No mention of the Navan app or snapping at point of sale."
+      },
+      {
+        "message_id": "M3",
+        "status": "missed",
+        "evidence_quote": "Buy the pod, keep the receipt",
+        "note": "Buys the $300 part with no mention of pre-approval."
+      }
+    ],
+    "overall_score": 15,
+    "answer_is_vague": true,
+    "follow_up_question": "For that three hundred dollar part, does anyone need to approve it first, and how do you send the receipt?",
+    "what_they_would_actually_do": "He'd buy the $300 part without pre-approval, keep the paper receipt, and hand in a batch of expenses at month end."
+  },
+  "cost_usd": 0.0165,
+  "tokens": {
+    "input": 1698,
+    "output": 319
+  },
+  "scoring_model": "claude-opus-5"
+}

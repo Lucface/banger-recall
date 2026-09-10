@@ -1,0 +1,87 @@
+{
+  "session_id": "fixture-aisha",
+  "mode": "fixture",
+  "participant": "Aisha (synthetic)",
+  "client": "Cobalt Logistics (fictional)",
+  "song_title": "Thirty Days (The Expense Song)",
+  "brief_messages": [
+    {
+      "id": "M1",
+      "message": "Submit expense reports within 30 days of the purchase",
+      "behavior": "File each expense inside 30 days instead of batching them at quarter end",
+      "common_misrecall": "The old 90-day window, or a made-up number like 60 days"
+    },
+    {
+      "id": "M2",
+      "message": "Snap the receipt in the Navan app at the point of sale, never email it",
+      "behavior": "Photograph the receipt in the app when paying, instead of emailing receipts to accounting",
+      "common_misrecall": "Emailing receipts to Denise in accounting, the old process"
+    },
+    {
+      "id": "M3",
+      "message": "Anything over $250 needs manager pre-approval before you buy",
+      "behavior": "Get a manager's approval in the app before any purchase over $250",
+      "common_misrecall": "The old $500 threshold, or approval after the purchase instead of before"
+    }
+  ],
+  "started_at": "2026-09-10T02:20:09.507Z",
+  "completed_at": "2026-09-10T02:20:26.825Z",
+  "consent": {
+    "participant": "Aisha (synthetic)",
+    "consented": true,
+    "asked_at": "2026-09-10T02:20:09.507Z",
+    "script_version": "2026-09-09.1",
+    "retention_days": 30,
+    "purpose": "to check whether the song's message landed; the recording is scored, summarized for the company, and never used to clone a voice",
+    "withdrawal": "say 'stop' at any point, or tell the company to delete the recording; the check-in ends and nothing is kept",
+    "answer_transcript": "yes (synthetic employee; consent simulated)"
+  },
+  "answers": [
+    {
+      "question": "In your own words, what did the song ask you to do differently?",
+      "transcript": "30 days to file, photo of the receipt in the app when you pay, and manager sign off before anything over $250.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/aisha-q1.wav",
+      "is_follow_up": false
+    },
+    {
+      "question": "Say you bought a three hundred dollar part tomorrow. Walk me through exactly what you'd do.",
+      "transcript": "Approval first in the EAP since it's over $2.50, then buy, then snap the receipt right there.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/aisha-q2.wav",
+      "is_follow_up": false
+    }
+  ],
+  "recall": {
+    "per_message": [
+      {
+        "message_id": "M1",
+        "status": "landed",
+        "evidence_quote": "30 days to file",
+        "note": "Correct window stated."
+      },
+      {
+        "message_id": "M2",
+        "status": "landed",
+        "evidence_quote": "photo of the receipt in the app when you pay",
+        "note": "In-app capture at point of sale, no emailing."
+      },
+      {
+        "message_id": "M3",
+        "status": "landed",
+        "evidence_quote": "manager sign off before anything over $250",
+        "note": "Correct threshold and pre-approval order, confirmed in the walkthrough."
+      }
+    ],
+    "overall_score": 97,
+    "answer_is_vague": false,
+    "follow_up_question": null,
+    "what_they_would_actually_do": "They would get manager pre-approval in the app for a $300 part, buy it, snap the receipt at the register, and file within 30 days."
+  },
+  "cost_usd": 0.0151,
+  "tokens": {
+    "input": 1710,
+    "output": 261
+  },
+  "scoring_model": "claude-opus-5"
+}

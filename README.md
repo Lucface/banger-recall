@@ -8,7 +8,7 @@
 
 **Outcome: revenue.** **Friction: F5, no proof of impact** (and it feeds F6, reusable memory, as a side effect).
 
-Today a repeat purchase is a matter of taste and a premium price has nothing behind it. A recall report changes both: it is a billable line item after delivery ("Recall Check-in, 40 employees, $X"), it is the evidence that defends the price of the banger it measures, and it names the message employees still get wrong, which is the brief for banger number two. The check-in costs about a cent per employee to run, so the margin on the report is the report.
+Today a repeat purchase is a matter of taste and a premium price has nothing behind it. A recall report changes both: it is a billable line item after delivery ("Recall Check-in, 40 employees, $X"), it is the evidence that defends the price of the banger it measures, and it names the message employees still get wrong, which is the brief for banger number two. The check-in costs about two cents per employee to run (measured: $0.015 to $0.02 per scored session), so a 40-person check-in cycle is under a dollar and the margin on the report is the report.
 
 ## 3. What actually works
 

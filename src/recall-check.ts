@@ -1,5 +1,5 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { loadSongBrief, type SongBrief } from "./brief";
+import { loadSongBrief } from "./brief";
 import { isWithdrawal, recordSpokenConsent } from "./consent";
 import { estimateSessionCost } from "./cost";
 import { logOutcomeEvent } from "./events";

@@ -56,7 +56,7 @@
   {
     "id": "tom",
     "participant": "Tom (synthetic)",
-    "voice": "Alex",
+    "voice": "Reed",
     "answers": [
       "Get the receipts in quicker. The song was catchy, I'll give them that.",
       "Buy the part, keep the receipt, turn it in at the end of the month with the rest."
@@ -65,7 +65,7 @@
   {
     "id": "lena",
     "participant": "Lena (synthetic)",
-    "voice": "Fiona",
+    "voice": "Flo",
     "answers": [
       "Thirty days, the Navan app for receipts, no emailing. And approval for anything over two fifty before you spend it.",
       "Over two fifty, so I message my manager for approval in Navan first. Then I buy it and photograph the receipt in the app."
@@ -74,7 +74,7 @@
   {
     "id": "carlos",
     "participant": "Carlos (synthetic)",
-    "voice": "Diego",
+    "voice": "Rishi",
     "answers": [
       "Thirty days to submit. Receipts in the app. I don't remember anything about approvals.",
       "I'd just buy it, it's only three hundred, and put the receipt in the app."
@@ -83,7 +83,7 @@
   {
     "id": "nina",
     "participant": "Nina (synthetic)",
-    "voice": "Victoria",
+    "voice": "Sandy",
     "answers": [
       "Sixty days to file I think, and use the app for receipts.",
       "Get approval after I buy it if it's big, and snap the receipt in the app."

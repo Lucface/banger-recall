@@ -1,0 +1,87 @@
+{
+  "session_id": "fixture-carlos",
+  "mode": "fixture",
+  "participant": "Carlos (synthetic)",
+  "client": "Cobalt Logistics (fictional)",
+  "song_title": "Thirty Days (The Expense Song)",
+  "brief_messages": [
+    {
+      "id": "M1",
+      "message": "Submit expense reports within 30 days of the purchase",
+      "behavior": "File each expense inside 30 days instead of batching them at quarter end",
+      "common_misrecall": "The old 90-day window, or a made-up number like 60 days"
+    },
+    {
+      "id": "M2",
+      "message": "Snap the receipt in the Navan app at the point of sale, never email it",
+      "behavior": "Photograph the receipt in the app when paying, instead of emailing receipts to accounting",
+      "common_misrecall": "Emailing receipts to Denise in accounting, the old process"
+    },
+    {
+      "id": "M3",
+      "message": "Anything over $250 needs manager pre-approval before you buy",
+      "behavior": "Get a manager's approval in the app before any purchase over $250",
+      "common_misrecall": "The old $500 threshold, or approval after the purchase instead of before"
+    }
+  ],
+  "started_at": "2026-09-10T02:20:50.583Z",
+  "completed_at": "2026-09-10T02:21:02.871Z",
+  "consent": {
+    "participant": "Carlos (synthetic)",
+    "consented": true,
+    "asked_at": "2026-09-10T02:20:50.583Z",
+    "script_version": "2026-09-09.1",
+    "retention_days": 30,
+    "purpose": "to check whether the song's message landed; the recording is scored, summarized for the company, and never used to clone a voice",
+    "withdrawal": "say 'stop' at any point, or tell the company to delete the recording; the check-in ends and nothing is kept",
+    "answer_transcript": "yes (synthetic employee; consent simulated)"
+  },
+  "answers": [
+    {
+      "question": "In your own words, what did the song ask you to do differently?",
+      "transcript": "30 days to submit, receipts in the app, I don't remember anything about approvals.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/carlos-q1.wav",
+      "is_follow_up": false
+    },
+    {
+      "question": "Say you bought a three hundred dollar part tomorrow. Walk me through exactly what you'd do.",
+      "transcript": "I'd just buy it, it's only 300, and put the receipt in the app.",
+      "input_kind": "synthetic_voice",
+      "audio_path": "fixtures/audio/carlos-q2.wav",
+      "is_follow_up": false
+    }
+  ],
+  "recall": {
+    "per_message": [
+      {
+        "message_id": "M1",
+        "status": "landed",
+        "evidence_quote": "30 days to submit",
+        "note": "States the correct 30-day window."
+      },
+      {
+        "message_id": "M2",
+        "status": "landed",
+        "evidence_quote": "receipts in the app",
+        "note": "Says receipts go in the app, and repeats it in the scenario."
+      },
+      {
+        "message_id": "M3",
+        "status": "misrecalled",
+        "evidence_quote": "I'd just buy it, it's only 300",
+        "note": "Confidently treats a $300 purchase as needing no pre-approval, the wrong threshold behavior."
+      }
+    ],
+    "overall_score": 55,
+    "answer_is_vague": false,
+    "follow_up_question": null,
+    "what_they_would_actually_do": "They would file within 30 days and photograph receipts in the app, but buy a $300 part outright with no manager pre-approval."
+  },
+  "cost_usd": 0.0153,
+  "tokens": {
+    "input": 1694,
+    "output": 272
+  },
+  "scoring_model": "claude-opus-5"
+}

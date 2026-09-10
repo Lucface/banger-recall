@@ -25,6 +25,8 @@ bun run report --fixtures-only
 
 "Twelve employees, synthetic voices, scored by the same code before the demo." Point at the table: the message with the lowest landed rate, the misrecalls in their own words, the next-banger candidate line. "That line is the next sale."
 
+The numbers as baked (2026-09-09): M1 landed 58%, M2 landed 75%, M3 landed 50% with five employees still on the old $500 threshold or buying first and asking later. Next banger candidate: M3. Cost of all twelve check-ins: about twenty cents.
+
 **1:45 – 2:00, what is real and what is staged**
 
 "Everything you saw runs. The twelve employees are synthetic. The company is fictional. The phone call is a laptop. Supabase is a documented path, not built. Done."
