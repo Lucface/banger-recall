@@ -8,6 +8,53 @@ export type CapturedAnswer =
   | { kind: "spoken"; wavPath: string }
   | { kind: "typed"; text: string };
 
+type ParticipantInput = ReturnType<typeof createInterface>;
+
+let participantInput: ParticipantInput | null = null;
+const bufferedLines: string[] = [];
+const lineWaiters: ((line: string) => void)[] = [];
+let inputClosed = false;
+
+/**
+ * One readline over stdin for the whole check-in, with every line buffered.
+ * Readline emits all the lines of a piped chunk at once, so a per-question
+ * `question()` keeps the first and loses the rest; buffering them lets a scripted
+ * typed run (answers piped in) behave exactly like a person typing at the keyboard.
+ */
+function typedInput(): ParticipantInput {
+  if (!participantInput) {
+    participantInput = createInterface({ input: stdin, output: stdout });
+    participantInput.on("line", (line) => {
+      const waiter = lineWaiters.shift();
+      if (waiter) waiter(line);
+      else bufferedLines.push(line);
+    });
+    participantInput.on("close", () => {
+      inputClosed = true;
+      for (const waiter of lineWaiters.splice(0)) waiter("");
+    });
+  }
+  return participantInput;
+}
+
+async function readTypedLine(prompt: string): Promise<string> {
+  typedInput();
+  stdout.write(prompt);
+  const queued = bufferedLines.shift();
+  if (queued !== undefined) {
+    stdout.write(`${queued}\n`);
+    return queued;
+  }
+  if (inputClosed) return "";
+  return new Promise((resolve) => lineWaiters.push(resolve));
+}
+
+/** Releases stdin at the end of a typed check-in so the process can exit. */
+export function closeParticipantInput(): void {
+  participantInput?.close();
+  participantInput = null;
+}
+
 /**
  * Captures the participant's answer, the human input that starts the workflow (MR-2).
  *
@@ -23,9 +70,7 @@ export async function captureSpokenAnswer(options: {
   maxSeconds?: number;
 }): Promise<CapturedAnswer> {
   if (options.mode === "typed") {
-    const rl = createInterface({ input: stdin, output: stdout });
-    const text = (await rl.question("⌨️  your answer: ")).trim();
-    rl.close();
+    const text = (await readTypedLine("⌨️  your answer: ")).trim();
     return { kind: "typed", text };
   }
 

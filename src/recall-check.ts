@@ -3,7 +3,7 @@ import { loadSongBrief } from "./brief";
 import { isWithdrawal, recordSpokenConsent } from "./consent";
 import { estimateSessionCost } from "./cost";
 import { logOutcomeEvent } from "./events";
-import { captureSpokenAnswer, type CaptureMode } from "./listen";
+import { captureSpokenAnswer, closeParticipantInput, type CaptureMode } from "./listen";
 import { SCORING_MODEL, scoreRecallAgainstBrief, type ScoredAnswer, type TokenUsage } from "./score-recall";
 import { RecallSessionSchema, type AnswerRecord, type RecallSession } from "./session";
 import { speakToParticipant } from "./speak";
@@ -131,6 +131,7 @@ export async function runRecallCheckIn(args: CliArgs): Promise<RecallSession> {
   writeFileSync(path, `${JSON.stringify(session, null, 2)}\n`);
   logOutcomeEvent({ type: "session_completed", ...base, data: { cost_usd: cost.usd, consented: consent.consented } });
   printSessionSummary(session, path);
+  closeParticipantInput();
   return session;
 }
 

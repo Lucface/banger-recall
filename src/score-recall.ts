@@ -77,9 +77,22 @@ export async function scoreRecallAgainstBrief(
   });
   if (!response.parsed_output) throw new Error("the scoring model returned no structured recall score");
   return {
-    score: response.parsed_output,
+    score: oneRowPerRequiredMessage(brief, response.parsed_output),
     usage: { input_tokens: response.usage.input_tokens, output_tokens: response.usage.output_tokens },
   };
+}
+
+/**
+ * Keeps the recall record deterministic for downstream steps: exactly one row per
+ * required message, in brief order. A duplicated id keeps its first row; a message
+ * the model skipped is recorded as missed rather than silently absent.
+ */
+function oneRowPerRequiredMessage(brief: SongBrief, score: RecallScore): RecallScore {
+  const perMessage: MessageRecall[] = brief.required_messages.map((required) => {
+    const row = score.per_message.find((m) => m.message_id === required.id);
+    return row ?? { message_id: required.id, status: "missed", evidence_quote: "", note: "not addressed by the scorer" };
+  });
+  return { ...score, per_message: perMessage };
 }
 
 function buildScoringPrompt(brief: SongBrief, answers: ScoredAnswer[]): string {
