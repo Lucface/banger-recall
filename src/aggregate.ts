@@ -33,7 +33,7 @@ export const REPORT_MD_PATH = "out/recall-report.md";
 /**
  * Aggregates every participant's recall record into one recall report (OR-9).
  *
- * This is the proof of impact the company does not have today (F5): for each required
+ * This is the proof of impact the company does not have today: for each required
  * message, the share of employees for whom it landed, was partial, missed, or
  * misrecalled, with the quotes behind each misrecall. The message with the lowest
  * landed rate is named as the next banger candidate, which is how a recall report

@@ -2,13 +2,13 @@
 
 ## 1. What this is
 
-**Banger Recall** is a 45-second voice check-in that calls an employee a week after a banger ships, asks two questions out loud, and scores whether the song's message actually landed. It gives Business Bangerz the one thing it cannot show a client today: proof the message stuck, and the exact message the next song has to fix.
+**Banger Recall** is a 45-second voice check-in that calls an employee a week after a banger ships, asks two questions out loud, and scores whether the song's message actually landed. It gives a company that writes songs for business messages the one thing it cannot show a client today: proof the message stuck, and the exact message the next song has to fix.
 
 ## 2. The outcome it targets
 
-**Outcome: revenue.** **Friction: F5, no proof of impact** (and it feeds F6, reusable memory, as a side effect).
+**Outcome: revenue.** **Friction: no proof of impact** (and it feeds reusable memory as a side effect).
 
-Today a repeat purchase is a matter of taste and a premium price has nothing behind it. A recall report changes both: it is a billable line item after delivery ("Recall Check-in, 40 employees, $X"), it is the evidence that defends the price of the banger it measures, and it names the message employees still get wrong, which is the brief for banger number two. The check-in costs about two cents per employee to run (measured: $0.015 to $0.02 per scored session), so a 40-person check-in cycle is under a dollar and the margin on the report is the report.
+A recall report is a billable line item after delivery ("Recall Check-in, 40 employees, $X"), and it names the message employees still get wrong, which is the brief for the next song. The check-in costs about two cents per employee to run (measured: $0.015 to $0.02 per scored session), so a 40-person check-in cycle is under a dollar and the margin on the report is the report.
 
 ## 3. What actually works
 
@@ -103,7 +103,7 @@ Cut on purpose, in the first ten minutes:
 - **Scheduling and outreach.** Which employees, which day after release, reminders. Real work, none of it about whether recall can be measured.
 - **Barge-in and full-duplex conversation.** A realtime voice platform would give this for free; in 90 minutes the assembled pipeline (speak, listen, transcribe, score) was the honest choice, and the conversation design still handles silence, vagueness, and withdrawal.
 - **Enforced retention and deletion.** Recorded in every consent record; a cron that deletes audio after 30 days is a two-line follow-up.
-- **The next-brief loop.** The report names the next banger candidate; feeding it into a brief automatically (F6) is the obvious next hour.
+- **The next-brief loop.** The report names the next banger candidate; feeding it into a brief automatically is the obvious next hour.
 
 With two more hours: a Twilio number so the check-in is an actual call, a Supabase table for sessions, and a one-page recall report the founder can send to the client with one click.
 
@@ -137,7 +137,7 @@ This is designed with BIPA, CUBI, and GDPR biometric provisions in mind (notice,
 
 ## Measuring the outcome
 
-`out/events.jsonl` is append-only and carries one row per step: session started, consent given or declined, question asked, answer captured, answer transcribed, follow-up asked, recall scored, session completed, each with participant, song, and cost. From those rows Business Bangerz can compute, per banger and over time: recall rate per message, check-in completion rate, consent decline rate, cost per employee, and, joined to sales, whether clients with a recall report buy a second banger more often than clients without one. That is the six-month proof.
+`out/events.jsonl` is append-only and carries one row per step: session started, consent given or declined, question asked, answer captured, answer transcribed, follow-up asked, recall scored, session completed, each with participant, song, and cost. From those rows the company can compute, per banger and over time: recall rate per message, check-in completion rate, consent decline rate, cost per employee, and, joined to sales, whether clients with a recall report buy a second banger more often than clients without one. That is the six-month proof.
 
 ## Path into the Next.js / Supabase surface
 

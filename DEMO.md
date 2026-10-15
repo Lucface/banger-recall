@@ -2,7 +2,7 @@
 
 **0:00 – 0:20, the outcome first (no screen yet)**
 
-"Business Bangerz can't prove a song worked. So the second banger is a matter of taste, and a premium price has nothing behind it. Banger Recall is a 45-second voice check-in, a week after the song ships. It asks two questions out loud, scores whether the message landed, and tells you exactly which message the next song has to fix. The report is a new line item. It costs about a cent per employee to run."
+"A company that sells original songs for business messages can't prove a song worked, so the next one is a hard sell. Banger Recall is a 45-second voice check-in, a week after the song ships. It asks two questions out loud, scores whether the message landed, and tells you exactly which message the next song has to fix. The report is a new line item. It costs about a cent per employee to run."
 
 **0:20 – 1:15, live (audio through the TV)**
 
